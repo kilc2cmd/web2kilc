@@ -10,6 +10,7 @@
   }
   
   .hero {
+    margin-top: 20px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -57,7 +58,8 @@
     display: flex;
     gap: 20px;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-between; /* Ensures even spacing between cards */
+    margin: 20px; /* Adds margin around the container */
   }
   
   .card {
@@ -65,17 +67,20 @@
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     overflow: hidden;
-    width: 300px;
+    flex: 1 1 calc(50% - 20px); /* Each card takes 50% of the width minus the gap */
+    max-width: calc(50% - 20px); /* Ensures cards don't exceed 50% width */
     transition: transform 0.3s ease;
   }
-  
+
   .card:hover {
     transform: translateY(-5px);
   }
   
   .card img {
-    width: 100%;
+    width: 100%; /* Ensures the image spans the full width of the card */
     height: auto;
+    max-height: 200px; /* Restricts the height of the image */
+    object-fit: cover; /* Ensures the image scales properly without distortion */
   }
   
   .card-content {
@@ -93,7 +98,95 @@
   }
 .btn:hover {
     background-color: #1a528f;
-}  
+}
+#section-2 {
+    padding-left: 50px;
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+.navbar-logo a {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #333;
+    text-decoration: none;
+}
+
+.navbar-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.navbar-links li {
+    display: inline;
+}
+
+.navbar-links a {
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: none;
+    color: #333;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+.navbar-links a:hover {
+    color: #007BFF;
+}
+
+.ai-selfie-barbershop {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 60px;
+    background-color: #e8f5fe;
+    margin-top: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.ai-selfie-content {
+    flex: 1;
+    padding-right: 40px;
+}
+
+.ai-selfie-content h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #007BFF;
+}
+
+.ai-selfie-content p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    color: #555;
+}
+
+.ai-selfie-image {
+    flex: 1;
+    text-align: center;
+    
+}
+
+.ai-selfie-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
 /* 📱 Responsive: Stack columns on mobile */
 @media (max-width: 768px) {
     .hero {
@@ -114,4 +207,38 @@
     .hero-content p {
       font-size: 1rem;
     }
-  }  
+    #section-2 {
+        padding-left: 0px;
+    }
+
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 15px;
+    }
+
+    .navbar-links {
+        flex-direction: column;
+        gap: 10px;
+        width: 100%;
+    }
+
+    .ai-selfie-barbershop {
+        flex-direction: column;
+        text-align: center;
+        padding: 40px 20px;
+    }
+
+    .ai-selfie-content {
+        padding-right: 0;
+        margin-bottom: 30px;
+    }
+
+    .ai-selfie-content h2 {
+        font-size: 2rem;
+    }
+
+    .ai-selfie-content p {
+        font-size: 1rem;
+    }
+}
