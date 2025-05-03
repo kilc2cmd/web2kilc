@@ -1,76 +1,141 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Two-Column Hero Section</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CuttingEdge AI - Revolutionizing Hairstyles</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/tsparticles@2.11.1/tsparticles.bundle.min.js"></script>
+  <script src="app.js" defer></script>
 </head>
 <body>
+  <div id="particles-js"></div>
+  <header class="navbar">
+    <div class="navbar-logo">
+      <a href="#">CuttingEdge AI</a>
+    </div>
+    <div class="hamburger-menu" id="hamburger-menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <ul class="navbar-links" id="navbar-links">
+      <li><a href="#hero">Home</a></li>
+      <li><a href="#how-it-works">How It Works</a></li>
+      <li><a href="#features">Features</a></li>
+      <li><a href="#benefits">Benefits</a></li>
+      <li><a href="#investment">Investment</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </header>
 
-<nav class="navbar">
-  <div class="navbar-logo">
-    <a href="#">Barbershop</a>
-  </div>
-  <ul class="navbar-links">
-    <li><a href="#hero">Home</a></li>
-    <li><a href="#services">Services</a></li>
-    <li><a href="#about">About</a></li>
-    <li><a href="#contact">Contact</a></li>
-  </ul>
-</nav>
-    
-  <section class="hero">
+  <section id="hero" class="hero">
     <div class="hero-content">
-      <h1>Picture-Perfect Hairstyles</h1>
-      <p>Transform Your Look: Upload Your Photo and Discover Your Perfect Hairstyle at Our Barbershop!</p>
-      <a href="#" class="btn" id="hero-btn">Get Started</a>
+      <h1>Welcome to CuttingEdge AI</h1>
+      <p>Revolutionizing how we choose hairstyles with AI and Augmented Reality.</p>
+      <a href="#how-it-works" class="btn">Learn More</a>
     </div>
     <div class="hero-image">
-      <img src="https://i.pinimg.com/originals/58/9c/8f/589c8f066bff424545264486fa277c38.jpg" alt="Hero Image">
+      <img id="imgas" src="https://i0.wp.com/pbs.twimg.com/media/FblSoizXwAAU0bd.jpg?ssl=1" alt="CuttingEdge AI Hero Image">
     </div>
   </section>
 
-  <section class="card-container">
-    <div class="card">
-      <img src="https://sun9-2.userapi.com/impf/6zFWkzk6Tg_MpNsV-vJgSH4_Tc09ntNFiEexzw/Gqw10hlobeY.jpg?size=1920x768&quality=95&crop=0,31,1600,639&sign=eaa689ff08e3c3d2b4308f9d0be4aee2&type=cover_group" alt="Card Image">
-      <div class="card-content">
-        <h3>Classic Barber Tools</h3>
-        <p>Discover timeless grooming essentials with a vintage touch.</p>
-        <a href="#" class="btn">Learn More</a>
+  <section id="how-it-works" class="how-it-works">
+    <h2>How It Works</h2>
+    <div class="steps">
+      <div class="step">
+        <h3>Step 1</h3>
+        <p>Upload your selfie to our platform.</p>
       </div>
-    </div>
-    
-    <div class="card">
-      <img id="card-img-2" src="https://i.ytimg.com/vi/3jUZViiz1V4/maxresdefault.jpg" alt="Card Image">
-      <div class="card-content">
-        <h3>AI Innovation Hub</h3>
-        <p>Explore cutting-edge artificial intelligence in a sleek, modern design.</p>
-        <a href="#" class="btn">Read More</a>
+      <div class="step">
+        <h3>Step 2</h3>
+        <p>Our AI analyzes your face shape, skin tone, and hair type.</p>
       </div>
-    </div>
-  
-</section>
-
-<section class="ai-selfie-barbershop">
-  <div class="ai-selfie-content">
-    <h2>AI-Selfie Barbershop</h2>
-    <p>Experience the future of hairstyling with our AI-powered selfie tool. Upload your photo and preview your perfect hairstyle before stepping into the chair!</p>
-    <a href="#" class="btn">Try It Now</a>
-  </div>
-  <div class="ai-selfie-image">
-    <img src="https://blog.wir.ch/wp-content/uploads/2021/08/fhnw_studie_kmu_digitale_strategie_social_media_gastgewerbe-1860x1046-c-default.jpg" alt="AI Selfie Barbershop">
-  </div>
-</section>
-
-  <section class="hero">
-      <div class="hero-image">
-        <img src="https://blog.wir.ch/wp-content/uploads/2021/08/fhnw_studie_kmu_digitale_strategie_social_media_gastgewerbe-1860x1046-c-default.jpg" alt="Hero Image">
+      <div class="step">
+        <h3>Step 3</h3>
+        <p>Get personalized hairstyle and color recommendations in seconds.</p>
       </div>
-    <div class="hero-content" id="section-2">
-      <h1>Best Hairstyle with AI</h1>
-      <p>Transform Your Look: Upload Your Photo and Discover Your Perfect Hairstyle at Our Barbershop!</p>
+      <div class="step">
+        <h3>Step 4</h3>
+        <p>Use AR to preview your new look live before making any changes.</p>
+      </div>
     </div>
   </section>
+
+  <section id="features" class="features">
+    <h2>Why CuttingEdge AI?</h2>
+    <div class="feature-cards">
+      <div class="card">
+        <img src="https://via.placeholder.com/300x200" alt="Feature 1">
+        <h3>AI-Powered Insights</h3>
+        <p>Advanced algorithms analyze your unique features for tailored recommendations.</p>
+      </div>
+      <div class="card">
+        <img src="https://via.placeholder.com/300x200" alt="Feature 2">
+        <h3>Augmented Reality</h3>
+        <p>See your new hairstyle live with AR before committing to a change.</p>
+      </div>
+      <div class="card">
+        <img src="https://via.placeholder.com/300x200" alt="Feature 3">
+        <h3>Confidence Boost</h3>
+        <p>Feel confident in your choices with expert-backed suggestions.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="benefits" class="benefits">
+    <h2>Why It Matters</h2>
+    <p>CuttingEdge AI is more than just a cool app—it’s practical. Users feel confident, stylists love the guidance, and it opens doors to:</p>
+    <ul>
+      <li>Salon partnerships</li>
+      <li>Personalized ads</li>
+      <li>Premium features</li>
+    </ul>
+  </section>
+
+  <section id="investment" class="investment">
+    <h2>Join the Future of Beauty-Tech</h2>
+    <p>The beauty-tech market is exploding, and CuttingEdge AI is ready to lead. We're seeking early investment to:</p>
+    <ul>
+      <li>Scale our technology</li>
+      <li>Expand to Android and iOS</li>
+      <li>Partner with major hair care brands</li>
+    </ul>
+    <p>This is more than a makeover app—it’s a decision-making engine for personal style. Let’s cut into the future—together.</p>
+    <a href="mailto:invest@cuttingedgeai.com" class="btn">Contact Us</a>
+  </section>
+
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-section"></div>
+        <h3>About Us</h3>
+        <p>CuttingEdge AI is dedicated to revolutionizing hairstyling with the power of artificial intelligence.</p>
+      </div>
+      <div class="footer-section">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="#hero">Home</a></li>
+          <li><a href="#how-it-works">How It Works</a></li>
+          <li><a href="#features">Features</a></li>
+          <li><a href="#benefits">Benefits</a></li>
+          <li><a href="#investment">Investment</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Social Media</h3>
+        <ul>
+          <li><a href="#">Facebook</a></li>
+          <li><a href="#">Twitter</a></li>
+          <li><a href="#">Instagram</a></li>
+          <li><a href="#">LinkedIn</a></li>
+          <li><a href="#">YouTube</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2023 CuttingEdge AI. All rights reserved.</p>
+    </div>
+  </footer>
 </body>
 </html>
